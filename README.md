@@ -1,5 +1,7 @@
 # Icontact
 
+[![Build Status](https://secure.travis-ci.org/LaunchWare/icontact.png)](http://travis-ci.org/LaunchWare/icontact)
+
 Web Wrapper for the IContact API
 
 ## Installation
