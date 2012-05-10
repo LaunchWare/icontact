@@ -1,5 +1,5 @@
 require 'rspec'
-require 'icontact'
+require 'i_contact'
 require 'mocha'
 
 RSpec.configure do |config|
