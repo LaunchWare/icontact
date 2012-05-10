@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe IContact do
-  let(:api_key) { "api_key" }
+  let(:app_id) { "app_id" }
 
   before(:each) do
     @config = IContact.configuration
@@ -13,11 +13,24 @@ describe IContact do
 
   it 'instantiates a configuration' do
     IContact.configure do |config|
-      config.api_key = api_key
+      config.app_id = app_id
     end
 
     IContact.configuration.should be_kind_of(IContact::Configuration)
-    IContact.configuration.api_key.should eql(api_key)
+    IContact.configuration.app_id.should eql(app_id)
   end
+
+  it 'raises an exception if I do not have a valid configuration' do
+    IContact.configuration = mock
+    IContact.configuration.expects(:valid?).returns(false)
+    lambda { IContact.connection }.should raise_error(IContact::InvalidConfiguration)
+  end
+
+  it 'raises an exception if I do not specify a configuration' do
+    IContact.configuration = nil
+    lambda { IContact.connection }.should raise_error(IContact::InvalidConfiguration)
+
+  end
+
 end
 

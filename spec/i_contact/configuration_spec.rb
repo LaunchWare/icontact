@@ -1,20 +1,20 @@
 require 'spec_helper'
 
 describe IContact::Configuration do
-  let(:api_key) { 'api_key' }
+  let(:app_id) { 'app_id' }
   let(:user_name) { 'user_name' }
   let(:password) { 'password' }
 
   let(:configuration) do
     IContact::Configuration.new do |config|
-      config.api_key = api_key
+      config.app_id = app_id
       config.user_name = user_name
       config.password = password
     end
   end
 
   it 'has an api key' do
-    configuration.api_key.should eql(api_key)
+    configuration.app_id.should eql(app_id)
   end
 
   it 'has a user name' do
@@ -31,6 +31,23 @@ describe IContact::Configuration do
 
   it 'defaults to sandbox mode' do
     configuration.mode = :sandbox
+  end
+
+  describe 'validity' do
+    it 'is invalid if I do not specify an app_id' do
+      configuration.app_id = nil
+      configuration.should_not be_valid
+    end
+
+    it 'is invalid if I do not specify a user_name' do
+      configuration.user_name = nil
+      configuration.should_not be_valid
+    end
+
+    it 'is invalid if I do not specify a password' do
+      configuration.password = nil
+      configuration.should_not be_valid
+    end
   end
 end
 
