@@ -5,11 +5,15 @@ module IContact
     attr_accessor :password
     attr_accessor :api_version
     attr_accessor :mode
+    attr_accessor :account_id
+    attr_accessor :client_folder_id
 
     REQUIRED_FIELDS = [
       :app_id,
       :user_name,
-      :password
+      :password,
+      :account_id,
+      :client_folder_id
     ]
 
     def initialize(&block)

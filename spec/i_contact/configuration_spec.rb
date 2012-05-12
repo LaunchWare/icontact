@@ -4,12 +4,16 @@ describe IContact::Configuration do
   let(:app_id) { 'app_id' }
   let(:user_name) { 'user_name' }
   let(:password) { 'password' }
+  let(:account_id) { 'account_id' }
+  let(:client_folder_id) { 'client_folder_id' }
 
   let(:configuration) do
     IContact::Configuration.new do |config|
       config.app_id = app_id
       config.user_name = user_name
       config.password = password
+      config.account_id = account_id
+      config.client_folder_id = client_folder_id
     end
   end
 
@@ -46,6 +50,16 @@ describe IContact::Configuration do
 
     it 'is invalid if I do not specify a password' do
       configuration.password = nil
+      configuration.should_not be_valid
+    end
+
+    it 'is invalid if I do not specify an account id' do
+      configuration.account_id = nil
+      configuration.should_not be_valid
+    end
+
+    it 'is invalid if I do not specify a client folder id' do
+      configuration.client_folder_id = nil
       configuration.should_not be_valid
     end
   end
