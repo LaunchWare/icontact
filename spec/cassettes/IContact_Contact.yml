@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/contacts
+    body:
+      encoding: UTF-8
+      string: ! '[{"email":"dan.pickett@launchware.com"}]'
+    headers:
+      Api-Appid:
+      - <APP_ID>
+      Api-Username:
+      - <USER_NAME>
+      Api-Password:
+      - <PASSWORD>
+      Api-Version:
+      - '2.2'
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 May 2012 01:17:27 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '295'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"contacts":[{"contactId":"66664772","prefix":"","firstName":"","lastName":"","suffix":"","street":"","street2":"","city":"","state":"","postalCode":"","phone":"","fax":"","business":"","email":"dan.pickett@launchware.com","createDate":"2012-05-14
+        21:17:27","bounceCount":"","status":"normal"}]}'
+    http_version: 
+  recorded_at: Tue, 15 May 2012 01:17:27 GMT
+- request:
+    method: get
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/contacts?unlisted=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Api-Appid:
+      - <APP_ID>
+      Api-Username:
+      - <USER_NAME>
+      Api-Password:
+      - <PASSWORD>
+      Api-Version:
+      - '2.2'
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 May 2012 01:17:28 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '462'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA81SPW/bMBD9KwdOLaAIshrLsKYEaYcsRYcsRZvhTJ4sIhSp
+        8sOKG/i/9yQ5copunbJIvMd379498EVIZyPKGET940VQh9qIWiAdyFOMNx0q
+        PDifS9eJTDTah/gVO2LKbdp5OjJocMG+zF0M9p4a/Sxqm4zJREjNm6rB5di3
+        ztLCip4o/l2Vr6XU8Xi5wrh09Y5Lc+fUgkhPfP954oiyWJVXxfqq2EJZ1OWm
+        Xq/FrJB4ZWGd79AwsnPJSrrj7+LgnMy9Yl5VVetq+2krTtklJYU277V8GoMy
+        yP3tgJ7+zWqWu+R0Nv7eIlpdQ7mqVxtO6T8jqq43m1KcHnlZ3WlmlUUmXNOE
+        0TMfo2MfjGaCg7La7sdXJx5aAoUR4egSeJKkD6SgwyNYF2FHMLQYp0t67klG
+        Ujk8tDpAi31Plrk7kpgCjRzPCr8ShQiTNz1eR/JdYBUtW0aTUa/CPMztrf7N
+        HLQKgoOBHzDoPe/M2IdkjQ4872P+037n+RItKAekY0seXAP8h8YZ4wZepj43
+        MsrmzhtOwqMVbRNl4Dwv9kSAYGlYrKYwMmeb80TQdhK//XbPE2XqiJeJ2tlc
+        PJ7+ABctguu1AwAA
+    http_version: 
+  recorded_at: Tue, 15 May 2012 01:17:28 GMT
+recorded_with: VCR 2.1.1

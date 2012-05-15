@@ -1,10 +1,23 @@
 require 'faraday'
+require 'faraday_middleware/response/parse_json'
+require 'faraday/request/url_encoded'
+
+require 'active_attr'
+
 require 'i_contact/version'
 require 'i_contact/configuration'
+require 'i_contact/response'
+
+require 'i_contact/model'
+
+require 'i_contact/account'
+require 'i_contact/client_folder'
+
 require 'i_contact/contact'
 
 module IContact
   class InvalidConfiguration < Exception; end;
+  class ApiError < Exception; end;
 
   class << self
     def configure(&block)
@@ -24,13 +37,12 @@ module IContact
         raise InvalidConfiguration
       end
 
-      @connection ||= Faraday::Connection.new(:url => url,
+      @connection ||= Faraday::Connection.new({
         :headers => headers,
-        :ssl => {:verify => true}) do |builder|
+        :ssl => {:verify => true}}) do |builder|
 
+        #builder.use Faraday::Request::UrlEncoded
         builder.adapter Faraday.default_adapter
-        builder.use Faraday::Response::ParseJson
-        builder.use Faraday::Response::Mashify
       end
     end
 
@@ -39,12 +51,21 @@ module IContact
       connection
     end
 
+    def url(with_account_and_folder = true)
+      base_url = "https://#{host}/icp/"
+      if with_account_and_folder
+        base_url += "a/#{configuration.account_id}/c/#{configuration.client_folder_id}/"
+      end
+      base_url
+
+    end
+
     protected
-    def url
+    def host
       if configuration.mode == :sandbox
-        'https://app.sandbox.icontact.com/icp/'
+        'app.sandbox.icontact.com'
       else
-        'https://app.icontact.com/icp/'
+        "app.icontact.com"
       end
     end
 
@@ -52,7 +73,10 @@ module IContact
       {
         'API-AppId' => configuration.app_id,
         'API-UserName' => configuration.user_name,
-        'API-Password' => configuration.password
+        'API-Password' => configuration.password,
+        'API-Version'  => '2.2',
+        'Accept'       => 'application/json',
+        'Content-Type' => 'application/json'
       }
     end
   end

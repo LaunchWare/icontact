@@ -32,5 +32,9 @@ describe IContact do
 
   end
 
+  it 'includes the account id in the url by default' do
+    IContact.url.should =~ /#{IContact.configuration.account_id}/
+  end
+
 end
 

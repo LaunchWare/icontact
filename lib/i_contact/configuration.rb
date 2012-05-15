@@ -12,8 +12,6 @@ module IContact
       :app_id,
       :user_name,
       :password,
-      :account_id,
-      :client_folder_id
     ]
 
     def initialize(&block)

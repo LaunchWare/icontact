@@ -52,16 +52,6 @@ describe IContact::Configuration do
       configuration.password = nil
       configuration.should_not be_valid
     end
-
-    it 'is invalid if I do not specify an account id' do
-      configuration.account_id = nil
-      configuration.should_not be_valid
-    end
-
-    it 'is invalid if I do not specify a client folder id' do
-      configuration.client_folder_id = nil
-      configuration.should_not be_valid
-    end
   end
 end
 
