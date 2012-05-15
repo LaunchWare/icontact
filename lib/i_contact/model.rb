@@ -5,11 +5,14 @@ require 'active_support/core_ext/object/blank.rb'
 module IContact
   module Model
     extend ActiveSupport::Concern
+    extend ActiveModel::Naming
 
     included do
-      include ActiveAttr::BasicModel
+      include ActiveModel::Conversion
+      include ActiveModel::Validations
       include ActiveAttr::TypecastedAttributes
       include ActiveAttr::MassAssignment
+
       class_attribute :key_attr
       class_attribute :resource_name_attr
     end
@@ -37,13 +40,13 @@ module IContact
       end
 
       def get(additional_args = {})
-        connection.get path(self.resource_name.demodulize.pluralize),
+        connection.get path(self.resource_name.pluralize),
           additional_args
       end
 
       def parse(resp)
         resp = IContact::Response.new(resp)
-        if resp.errors.size > 0
+        if !resp.valid?
         else
           if resource_resp = resp.parsed_response[resource_name.pluralize]
             if resource_resp.kind_of?(Array)
@@ -62,7 +65,7 @@ module IContact
           hsh
         end
       end
-    end
+    end #end ClassMethods
 
     def save
       if valid?
@@ -74,11 +77,18 @@ module IContact
             self.attributes = response.parsed_response
             true
           else
+            @errors = response.errors
             false
           end
         else
 
         end
+      end
+    end
+
+    def save!
+      unless save
+        raise IContact::InvalidResource,  @errors.join(', ')
       end
     end
 
@@ -96,7 +106,7 @@ module IContact
     end
 
     def persisted?
-      self.class.key_attr && self.attributes[key_attr].present?
+      self.class.key_attr && self.attributes[self.class.key_attr.to_s].present?
     end
 
     protected
@@ -109,3 +119,4 @@ module IContact
     end
   end
 end
+

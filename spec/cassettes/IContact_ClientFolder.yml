@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Api-Appid:
+      - <APP_ID>
+      Api-Username:
+      - <USER_NAME>
+      Api-Password:
+      - <PASSWORD>
+      Api-Version:
+      - '2.2'
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 May 2012 01:28:54 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '122'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAy3KsQqDQAwG4Hf550NQioWbOgldu5YOIZfWw3gRG3EQ3721
+        dP34NrBmKf40TTK/Ee/bX7qfXBMi6ubUtmcEqL3skLKoBshIWW/CeTr+9yUq
+        1ZR5EPeL0lK4X2mWim3E/ghwc1LEev8A/cq3k3UAAAA=
+    http_version: 
+  recorded_at: Tue, 15 May 2012 01:28:54 GMT
+recorded_with: VCR 2.1.1

@@ -18,6 +18,7 @@ require 'i_contact/contact'
 module IContact
   class InvalidConfiguration < Exception; end;
   class ApiError < Exception; end;
+  class InvalidResource < Exception; end;
 
   class << self
     def configure(&block)
