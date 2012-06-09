@@ -5,7 +5,7 @@ http_interactions:
     uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/contacts
     body:
       encoding: UTF-8
-      string: ! '[{"email":"user@example.com"}]'
+      string: ! '[{"email":"subscriber@example.com"}]'
     headers:
       Api-Appid:
       - <APP_ID>
@@ -27,140 +27,113 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Jun 2012 19:46:51 GMT
+      - Sat, 09 Jun 2012 19:46:54 GMT
       Server:
       - Apache
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '285'
+      - '291'
       Connection:
       - close
       Content-Type:
       - text/html; charset=utf-8
     body:
       encoding: US-ASCII
-      string: ! '{"contacts":[{"contactId":"66674163","prefix":"","firstName":"","lastName":"","suffix":"","street":"","street2":"","city":"","state":"","postalCode":"","phone":"","fax":"","business":"","email":"user@example.com","createDate":"2012-06-09
-        15:46:52","bounceCount":"","status":"normal"}]}'
+      string: ! '{"contacts":[{"contactId":"66695798","prefix":"","firstName":"","lastName":"","suffix":"","street":"","street2":"","city":"","state":"","postalCode":"","phone":"","fax":"","business":"","email":"subscriber@example.com","createDate":"2012-06-09
+        15:46:55","bounceCount":"","status":"normal"}]}'
     http_version: 
-  recorded_at: Sat, 09 Jun 2012 19:46:51 GMT
-- request:
-    method: get
-    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/contacts?unlisted=true
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Api-Appid:
-      - <APP_ID>
-      Api-Username:
-      - <USER_NAME>
-      Api-Password:
-      - <PASSWORD>
-      Api-Version:
-      - '2.2'
-      Accept:
-      - application/json
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 09 Jun 2012 19:46:52 GMT
-      Server:
-      - Apache
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Content-Length:
-      - '458'
-      Connection:
-      - close
-      Content-Type:
-      - text/html; charset=utf-8
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA81Su27bQBD8lcVVMUALFG3SECsbTgo3QQo3QeJidVyKB9+D
-        uYcoxdC/Z0nKVIJ0qdKQt7Nzs7NDvgnpbEQZg6i/vQkyqLSoBdKePMV4b7DB
-        vfMr6YzIRKt8iJ/REFMe0tbTkUGNC/ZpvsVg76lVB1HbpHUmQmp/q1pcjn3n
-        LC2s6Inin1XxXkoVj5cWxuVW77jUj65ZEOmJ+x8njijydXGdl9f5Boq8Lu7q
-        shSzQuKVhXXeoGZk65KV9MjPxcE5maeGeVVVldXmZiNO2SWlFMjf0wFNr+nv
-        hGaRSzpnu/9XMNUYzLqsb6u6LP4xmLvbdXUjTi+8rDKKWUWeCde2YfTMx+jY
-        B6OZGNBbZXfjvyaeO4IGI8LRJfAkSe2pAYNHsC7ClmDoME5NOvQkIzUreO5U
-        gA77nixztySRP8HI8azwI1GIMHlTYzuSN4FVlOwYTbp5F+ZhbmfVT+agbSA4
-        GPi3BbXjnRn7kKxWgeddrb7brzxfooXGAanYkQfXAr+hdVq7gZepzxcZZXPn
-        DSfh0YqyiTJwnhd7JUCwNCxWUxiZs815Iig7iT98eeKJMhniZaJydiVeTr8A
-        IJpg+KsDAAA=
-    http_version: 
-  recorded_at: Sat, 09 Jun 2012 19:46:52 GMT
-- request:
-    method: get
-    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/contacts?email=user@example.com&unlisted=true
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Api-Appid:
-      - <APP_ID>
-      Api-Username:
-      - <USER_NAME>
-      Api-Password:
-      - <PASSWORD>
-      Api-Version:
-      - '2.2'
-      Accept:
-      - application/json
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 09 Jun 2012 19:46:52 GMT
-      Server:
-      - Apache
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Content-Length:
-      - '399'
-      Connection:
-      - close
-      Content-Type:
-      - text/html; charset=utf-8
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA1VRTU/bQBD9K6M5tZKJEgOu8AlEL1wqDlyqlsNkPY5XrHfc
-        /aiTIv57x05i4GL7zbx9H+tXNOITmRSx/vWK3JN1WGOOHG55T/3geGWkxwJb
-        G2L6QT1j7bNzBTr6jIfArd2fUcztB9TS8jl04pczMQXm9BmVZ2hsOryvKL07
-        iUJ3L80yMYF1/33mYLnelBfr6mJ9A5vr+qqqr0s8KmRtiV5CT04nW8ne8L0+
-        lwSny3holFdV1berTXWJb89a1vZWWeW6QGnbOGXWzySaA+tNgSMFb/1uukV8
-        6hgaSgQHyRDYsP3LDfR0AC8JtgxjR2le8n5gk7hZwVNnI3Q0DOyVu2VD+gsm
-        TlCFP5ljgjmbndaJQx9VxZpOp9k1Z2E1k523/5RDvoEoMHJgsDvtrLMv2Tsb
-        1e/r6rf/qf6GPDQCbFPHAaQFfUMrzsmoZerTQZ1quFPDWXiKYn3mAiRosRcG
-        As/jEjXHiXmMeXQE62fxu8cHdTS5Zy2TrPgVPr/9B7BnB/uFAgAA
-    http_version: 
-  recorded_at: Sat, 09 Jun 2012 19:46:52 GMT
+  recorded_at: Sat, 09 Jun 2012 19:46:54 GMT
 - request:
     method: post
-    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/contacts/66674163
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/lists
+    body:
+      encoding: UTF-8
+      string: ! '[{"name":"Test Subscription List"}]'
+    headers:
+      Api-Appid:
+      - <APP_ID>
+      Api-Username:
+      - <USER_NAME>
+      Api-Password:
+      - <PASSWORD>
+      Api-Version:
+      - '2.2'
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 09 Jun 2012 19:46:55 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '187'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"lists":[{"listId":"205304","name":"Test Subscription List","publicname":"","description":"","emailOwnerOnChange":1,"welcomeOnManualAdd":0,"welcomeOnSignupAdd":0,"welcomeMessageId":""}]}'
+    http_version: 
+  recorded_at: Sat, 09 Jun 2012 19:46:55 GMT
+- request:
+    method: post
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/subscriptions
+    body:
+      encoding: UTF-8
+      string: ! '[{"contactId":66695798,"listId":205304}]'
+    headers:
+      Api-Appid:
+      - <APP_ID>
+      Api-Username:
+      - <USER_NAME>
+      Api-Password:
+      - <PASSWORD>
+      Api-Version:
+      - '2.2'
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 09 Jun 2012 19:46:55 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '81'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"subscriptions":[],"warnings":["Subscription at index 0 field status
+        missing."]}'
+    http_version: 
+  recorded_at: Sat, 09 Jun 2012 19:46:55 GMT
+- request:
+    method: post
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/contacts/66695798
     body:
       encoding: UTF-8
       string: ! '{"status":"deleted"}'
@@ -185,7 +158,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Sat, 09 Jun 2012 19:46:53 GMT
+      - Sat, 09 Jun 2012 19:46:56 GMT
       Server:
       - Apache
       Vary:
@@ -201,5 +174,48 @@ http_interactions:
       string: ! '{"errors":["The status value you provided was not valid. status can
         be either donotcontact or normal. Please provide a valid status"]}'
     http_version: 
-  recorded_at: Sat, 09 Jun 2012 19:46:53 GMT
+  recorded_at: Sat, 09 Jun 2012 19:46:56 GMT
+- request:
+    method: delete
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/lists/205304
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Api-Appid:
+      - <APP_ID>
+      Api-Username:
+      - <USER_NAME>
+      Api-Password:
+      - <PASSWORD>
+      Api-Version:
+      - '2.2'
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 09 Jun 2012 19:46:57 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '2'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '[]'
+    http_version: 
+  recorded_at: Sat, 09 Jun 2012 19:46:56 GMT
 recorded_with: VCR 2.1.1

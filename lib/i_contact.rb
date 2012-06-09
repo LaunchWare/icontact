@@ -14,6 +14,8 @@ require 'i_contact/account'
 require 'i_contact/client_folder'
 
 require 'i_contact/contact'
+require 'i_contact/list'
+require 'i_contact/subscription'
 
 module IContact
   class InvalidConfiguration < Exception; end;

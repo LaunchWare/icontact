@@ -74,7 +74,9 @@ module IContact
             serialized_attributes.to_json)
           response = IContact::Response.new(raw_resp)
           if response.valid?
-            self.attributes = response.parsed_response
+            if response.parsed_response.values.first.first
+              self.attributes = normalize_attrs(response.parsed_response.values.first.first)
+            end
             true
           else
             @errors = response.errors
@@ -83,6 +85,13 @@ module IContact
         else
 
         end
+      end
+    end
+
+    def normalize_attrs(attrs)
+      attrs.inject({}) do |hsh, pair|
+        hsh[pair[0].underscore] = pair[1]
+        hsh
       end
     end
 
@@ -95,13 +104,13 @@ module IContact
 
     def destroy
       if persisted?
-        connection.delete(path("#{self.class.resource_name.demodulize.pluralize}/#{self.attributes[self.class.key_attr]}"))
+        connection.delete(path("#{self.class.resource_name.demodulize.pluralize}/#{self.attributes[self.class.key_attr.to_s]}"))
       end
     end
 
     def serialized_attributes
       result = attributes.inject({}) do |hsh, keypair|
-        hsh[keypair[0]] = keypair[1] unless keypair[1].nil?
+        hsh[keypair[0].camelcase(:lower)] = keypair[1] unless keypair[1].nil?
         hsh
       end
 

@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/lists
+    body:
+      encoding: UTF-8
+      string: ! '[{"name":"Test List"}]'
+    headers:
+      Api-Appid:
+      - <APP_ID>
+      Api-Username:
+      - <USER_NAME>
+      Api-Password:
+      - <PASSWORD>
+      Api-Version:
+      - '2.2'
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 09 Jun 2012 19:46:53 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '174'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"lists":[{"listId":"205303","name":"Test List","publicname":"","description":"","emailOwnerOnChange":1,"welcomeOnManualAdd":0,"welcomeOnSignupAdd":0,"welcomeMessageId":""}]}'
+    http_version: 
+  recorded_at: Sat, 09 Jun 2012 19:46:53 GMT
+- request:
+    method: delete
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/lists/205303
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Api-Appid:
+      - <APP_ID>
+      Api-Username:
+      - <USER_NAME>
+      Api-Password:
+      - <PASSWORD>
+      Api-Version:
+      - '2.2'
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 09 Jun 2012 19:46:54 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '2'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '[]'
+    http_version: 
+  recorded_at: Sat, 09 Jun 2012 19:46:54 GMT
+recorded_with: VCR 2.1.1
