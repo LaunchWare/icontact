@@ -16,9 +16,15 @@ module IContact
     attribute :fax, :type => String
     attribute :business, :type => String
 
+    def destroy
+      if persisted?
+        connection.post(path("#{self.class.resource_name.demodulize.pluralize}/#{self.attributes[self.class.key_attr.to_s]}"), {:status => 'deleted'}.to_json)
+      end
+    end
+
     class << self
-      def unlisted
-        parse(get(:unlisted => true))
+      def unlisted(options = {})
+        parse(get({:unlisted => true}.merge(options)))
       end
     end
   end

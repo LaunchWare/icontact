@@ -90,6 +90,13 @@ module IContact
       unless save
         raise IContact::InvalidResource,  @errors.join(', ')
       end
+      self
+    end
+
+    def destroy
+      if persisted?
+        connection.delete(path("#{self.class.resource_name.demodulize.pluralize}/#{self.attributes[self.class.key_attr]}"))
+      end
     end
 
     def serialized_attributes

@@ -5,7 +5,7 @@ http_interactions:
     uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/contacts
     body:
       encoding: UTF-8
-      string: ! '[{"email":"dan.pickett@launchware.com"}]'
+      string: ! '[{"email":"user@example.com"}]'
     headers:
       Api-Appid:
       - <APP_ID>
@@ -27,23 +27,23 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 15 May 2012 01:17:27 GMT
+      - Thu, 17 May 2012 01:34:32 GMT
       Server:
       - Apache
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '295'
+      - '285'
       Connection:
       - close
       Content-Type:
       - text/html; charset=utf-8
     body:
       encoding: US-ASCII
-      string: ! '{"contacts":[{"contactId":"66664772","prefix":"","firstName":"","lastName":"","suffix":"","street":"","street2":"","city":"","state":"","postalCode":"","phone":"","fax":"","business":"","email":"dan.pickett@launchware.com","createDate":"2012-05-14
-        21:17:27","bounceCount":"","status":"normal"}]}'
+      string: ! '{"contacts":[{"contactId":"66674163","prefix":"","firstName":"","lastName":"","suffix":"","street":"","street2":"","city":"","state":"","postalCode":"","phone":"","fax":"","business":"","email":"user@example.com","createDate":"2012-05-16
+        21:27:40","bounceCount":"","status":"normal"}]}'
     http_version: 
-  recorded_at: Tue, 15 May 2012 01:17:27 GMT
+  recorded_at: Thu, 17 May 2012 01:34:32 GMT
 - request:
     method: get
     uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/contacts?unlisted=true
@@ -73,7 +73,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 15 May 2012 01:17:28 GMT
+      - Thu, 17 May 2012 01:34:33 GMT
       Server:
       - Apache
       Vary:
@@ -81,7 +81,7 @@ http_interactions:
       Content-Encoding:
       - gzip
       Content-Length:
-      - '462'
+      - '491'
       Connection:
       - close
       Content-Type:
@@ -89,17 +89,216 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAA81SPW/bMBD9KwdOLaAIshrLsKYEaYcsRYcsRZvhTJ4sIhSp
-        8sOKG/i/9yQ5copunbJIvMd379498EVIZyPKGET940VQh9qIWiAdyFOMNx0q
-        PDifS9eJTDTah/gVO2LKbdp5OjJocMG+zF0M9p4a/Sxqm4zJREjNm6rB5di3
-        ztLCip4o/l2Vr6XU8Xi5wrh09Y5Lc+fUgkhPfP954oiyWJVXxfqq2EJZ1OWm
-        Xq/FrJB4ZWGd79AwsnPJSrrj7+LgnMy9Yl5VVetq+2krTtklJYU277V8GoMy
-        yP3tgJ7+zWqWu+R0Nv7eIlpdQ7mqVxtO6T8jqq43m1KcHnlZ3WlmlUUmXNOE
-        0TMfo2MfjGaCg7La7sdXJx5aAoUR4egSeJKkD6SgwyNYF2FHMLQYp0t67klG
-        Ujk8tDpAi31Plrk7kpgCjRzPCr8ShQiTNz1eR/JdYBUtW0aTUa/CPMztrf7N
-        HLQKgoOBHzDoPe/M2IdkjQ4872P+037n+RItKAekY0seXAP8h8YZ4wZepj43
-        MsrmzhtOwqMVbRNl4Dwv9kSAYGlYrKYwMmeb80TQdhK//XbPE2XqiJeJ2tlc
-        PJ7+ABctguu1AwAA
+        H4sIAAAAAAAAA9VTPW/bQAz9K8RNLaAYsmxLsKYEaYcsRYcsRZuBPlHWIfeh
+        3oc/Gvi/l7IcuUG3TO0iiY+P5OPT3YuQzkaUMYj6+4sgg0qLWiDtyFOMtwYb
+        3Dk/k86ITLTKh/gFDTHlLm08HRnUOGGfxyoGe0+tOojaJq0zEVL7R9Ti9Nl3
+        ztLEip4ovo2K11CqeLymME5VveNQ37tmQqQnzn86c0SRz4ubfHWTr6HI66Kq
+        Vysxdki8srDOG9SMbFyyku75OSm4OPPQMK8sy1W5XqzFKbu61KCd9Uo+D0Zp
+        5Ppuj57+9mpsd/XpIvxfs2i+hGJezyt26Z0WlcuqKt5YlAL5Wzqg6fV/bEw5
+        GMNnZ5m/05hqOS8X4vTEyyqjmFXkmXBtGwbN/Bkd6xD1IhN8gqyy2+E6iseO
+        oMGIcHQJPElSO2rA4BGsi7Ah2HcYz0k69CQjNTN47FSADvueLHM3JJF/wcDx
+        3OFnohDhrE0N6UjeBO6iZMdo0s1rYx7mtlb9Yg7aBoKDPd9sUFvembEPyWoV
+        eN7H2Q/7jedLtNA4IBU78uBa4De0Tmu352XqSyGjLO6y4bnxIEXZRBk4z4s9
+        EyBY2k9SUxiYo8xxIih7bn739YEnymSIl4nK2Zl4Ov0GaeMYNM4EAAA=
     http_version: 
-  recorded_at: Tue, 15 May 2012 01:17:28 GMT
+  recorded_at: Thu, 17 May 2012 01:34:33 GMT
+- request:
+    method: get
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/contacts?email=user@example.com&unlisted=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Api-Appid:
+      - <APP_ID>
+      Api-Username:
+      - <USER_NAME>
+      Api-Password:
+      - <PASSWORD>
+      Api-Version:
+      - '2.2'
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 17 May 2012 01:34:33 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '398'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA1VRTW+bQBD9K6M9tRKxDE2IxKlVesml6iGXqMlhvQxm1GWG
+        7kewG+W/d8A2aS7Am3n7PpZX44STdSma5terwcGSN43JEcNXPNhh9LhxMpjC
+        dBRi+mEHNA1n7wvj7Uc8BuzocEExd/+hzq6fYy+8nokpIKaPqLpAR+n4vrLp
+        3UkU+jtp14kLqPvvC8dU27K62t5clTVUZVPdNtdbc1LI2tKwhMF6newks8M7
+        fa4Jzpdx3yqvruvb67L+Yt6etSwNpKxqWxjpujhn1s8kmsM0ZWEmG5h4P9+i
+        eegRWpssHCVDQIf0gi0M9ggsCXYIU2/TssTDiC5hu4GHniL0dhyRlbtDZ/UX
+        zJygCn8yxgRLNprXCcMQVYVcr9Ps24uwmsme6a9yLLcQBSYMCLTXzjr7lNlT
+        VL/Pmyd+VH9nGVoBpNRjAOlA39CJ9zJpmeZ8UKca7txwEZ6jEGcsQIIW+41g
+        gXFao+Y4M08xT45AvIh/+3mvji4PqGUSCW/M89s/bb8IhYUCAAA=
+    http_version: 
+  recorded_at: Thu, 17 May 2012 01:34:34 GMT
+- request:
+    method: post
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/contacts/
+    body:
+      encoding: UTF-8
+      string: ! '{"status":"deleted"}'
+    headers:
+      Api-Appid:
+      - <APP_ID>
+      Api-Username:
+      - <USER_NAME>
+      Api-Password:
+      - <PASSWORD>
+      Api-Version:
+      - '2.2'
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Thu, 17 May 2012 01:34:34 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '63'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"errors":["Invalid Data: You must provide well-formed data."]}'
+    http_version: 
+  recorded_at: Thu, 17 May 2012 01:34:34 GMT
+- request:
+    method: get
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/contacts?email=user@example.com&unlisted=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Api-Appid:
+      - <APP_ID>
+      Api-Username:
+      - <USER_NAME>
+      Api-Password:
+      - <PASSWORD>
+      Api-Version:
+      - '2.2'
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 17 May 2012 01:34:35 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '398'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA1VRTW+bQBD9K6M9tRKxDE2IxKlVesml6iGXqMlhvQxm1GWG
+        7kewG+W/d8A2aS7Am3n7PpZX44STdSma5terwcGSN43JEcNXPNhh9LhxMpjC
+        dBRi+mEHNA1n7wvj7Uc8BuzocEExd/+hzq6fYy+8nokpIKaPqLpAR+n4vrLp
+        3UkU+jtp14kLqPvvC8dU27K62t5clTVUZVPdNtdbc1LI2tKwhMF6newks8M7
+        fa4Jzpdx3yqvruvb67L+Yt6etSwNpKxqWxjpujhn1s8kmsM0ZWEmG5h4P9+i
+        eegRWpssHCVDQIf0gi0M9ggsCXYIU2/TssTDiC5hu4GHniL0dhyRlbtDZ/UX
+        zJygCn8yxgRLNprXCcMQVYVcr9Ps24uwmsme6a9yLLcQBSYMCLTXzjr7lNlT
+        VL/Pmyd+VH9nGVoBpNRjAOlA39CJ9zJpmeZ8UKca7txwEZ6jEGcsQIIW+41g
+        gXFao+Y4M08xT45AvIh/+3mvji4PqGUSCW/M89s/bb8IhYUCAAA=
+    http_version: 
+  recorded_at: Thu, 17 May 2012 01:34:35 GMT
+- request:
+    method: post
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/contacts/66674163
+    body:
+      encoding: UTF-8
+      string: ! '{"status":"deleted"}'
+    headers:
+      Api-Appid:
+      - <APP_ID>
+      Api-Username:
+      - <USER_NAME>
+      Api-Password:
+      - <PASSWORD>
+      Api-Version:
+      - '2.2'
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Thu, 17 May 2012 01:38:53 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '134'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"errors":["The status value you provided was not valid. status can
+        be either donotcontact or normal. Please provide a valid status"]}'
+    http_version: 
+  recorded_at: Thu, 17 May 2012 01:38:53 GMT
 recorded_with: VCR 2.1.1

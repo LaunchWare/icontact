@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe IContact::Contact do
-  let(:email) { "dan.pickett@launchware.com" }
+  let(:email) { "user@example.com" }
 
   has_attr :contact_id, Integer
   has_attr :email, String
@@ -27,6 +27,14 @@ describe IContact::Contact do
   it 'allows me to get all the contacts that are unlisted' do
     contacts = IContact::Contact.unlisted
     contacts.should_not be_empty
+  end
+
+  it 'destroys a contact' do
+    contact = IContact::Contact.unlisted(:email => email).first
+    if contact.nil?
+      contact = IContact::Contact.new(:email => email).save!
+    end
+    lambda { contact.destroy }.should_not raise_error
   end
 end
 
