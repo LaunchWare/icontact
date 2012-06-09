@@ -9,8 +9,7 @@ tmux new-window -tIContact:1 -n server
 tmux new-window -tIContact:2 -n guard
 
 tmux send-keys -tIContact:1 'ruby script/server' C-m
-tmux send-keys -tIContact:2 'bundle exec guard' C-m
-
+tmux send-keys -tIContact:2 'source .env && bundle exec guard' C-m
 
 tmux select-window -tIContact:0
 tmux attach-session -d -tIContact
