@@ -27,7 +27,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Jun 2012 19:46:54 GMT
+      - Sat, 09 Jun 2012 20:25:49 GMT
       Server:
       - Apache
       Vary:
@@ -41,9 +41,9 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ! '{"contacts":[{"contactId":"66695798","prefix":"","firstName":"","lastName":"","suffix":"","street":"","street2":"","city":"","state":"","postalCode":"","phone":"","fax":"","business":"","email":"subscriber@example.com","createDate":"2012-06-09
-        15:46:55","bounceCount":"","status":"normal"}]}'
+        16:25:49","bounceCount":"","status":"normal"}]}'
     http_version: 
-  recorded_at: Sat, 09 Jun 2012 19:46:54 GMT
+  recorded_at: Sat, 09 Jun 2012 20:25:49 GMT
 - request:
     method: post
     uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/lists
@@ -71,7 +71,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Jun 2012 19:46:55 GMT
+      - Sat, 09 Jun 2012 20:25:50 GMT
       Server:
       - Apache
       Vary:
@@ -84,15 +84,15 @@ http_interactions:
       - text/html; charset=utf-8
     body:
       encoding: US-ASCII
-      string: ! '{"lists":[{"listId":"205304","name":"Test Subscription List","publicname":"","description":"","emailOwnerOnChange":1,"welcomeOnManualAdd":0,"welcomeOnSignupAdd":0,"welcomeMessageId":""}]}'
+      string: ! '{"lists":[{"listId":"205305","name":"Test Subscription List","publicname":"","description":"","emailOwnerOnChange":1,"welcomeOnManualAdd":0,"welcomeOnSignupAdd":0,"welcomeMessageId":""}]}'
     http_version: 
-  recorded_at: Sat, 09 Jun 2012 19:46:55 GMT
+  recorded_at: Sat, 09 Jun 2012 20:25:49 GMT
 - request:
     method: post
     uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/subscriptions
     body:
       encoding: UTF-8
-      string: ! '[{"contactId":66695798,"listId":205304}]'
+      string: ! '[{"contactId":66695798,"listId":205305,"status":"normal"}]'
     headers:
       Api-Appid:
       - <APP_ID>
@@ -114,23 +114,22 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Jun 2012 19:46:55 GMT
+      - Sat, 09 Jun 2012 20:25:50 GMT
       Server:
       - Apache
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '81'
+      - '153'
       Connection:
       - close
       Content-Type:
       - text/html; charset=utf-8
     body:
       encoding: US-ASCII
-      string: ! '{"subscriptions":[],"warnings":["Subscription at index 0 field status
-        missing."]}'
+      string: ! '{"subscriptions":[{"addDate":"2012-06-09T16:25:50-04:00","contactId":"66695798","listId":"205305","status":"normal","subscriptionId":"205305_66695798"}]}'
     http_version: 
-  recorded_at: Sat, 09 Jun 2012 19:46:55 GMT
+  recorded_at: Sat, 09 Jun 2012 20:25:50 GMT
 - request:
     method: post
     uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/contacts/66695798
@@ -158,7 +157,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Sat, 09 Jun 2012 19:46:56 GMT
+      - Sat, 09 Jun 2012 20:25:51 GMT
       Server:
       - Apache
       Vary:
@@ -174,10 +173,10 @@ http_interactions:
       string: ! '{"errors":["The status value you provided was not valid. status can
         be either donotcontact or normal. Please provide a valid status"]}'
     http_version: 
-  recorded_at: Sat, 09 Jun 2012 19:46:56 GMT
+  recorded_at: Sat, 09 Jun 2012 20:25:50 GMT
 - request:
     method: delete
-    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/lists/205304
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/lists/205305
     body:
       encoding: US-ASCII
       string: ''
@@ -202,7 +201,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 09 Jun 2012 19:46:57 GMT
+      - Sat, 09 Jun 2012 20:25:51 GMT
       Server:
       - Apache
       Vary:
@@ -217,5 +216,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '[]'
     http_version: 
-  recorded_at: Sat, 09 Jun 2012 19:46:56 GMT
+  recorded_at: Sat, 09 Jun 2012 20:25:51 GMT
 recorded_with: VCR 2.1.1

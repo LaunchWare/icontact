@@ -29,6 +29,11 @@ describe IContact::Contact do
     contacts.should_not be_empty
   end
 
+  it 'handles for when something goes wrong' do
+    contact = IContact::Contact.new(:email => nil)
+    contact.save.should be_false
+  end
+
   it 'destroys a contact' do
     contact = IContact::Contact.unlisted(:email => email).first
     if contact.nil?

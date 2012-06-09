@@ -40,6 +40,7 @@ describe IContact::Model do
     mock_resp = mock
     mock_resp.stubs(:valid?).returns(false)
     mock_resp.stubs(:body).returns({:testmodels => [{:email => email}]}.to_json)
+    mock_resp.stubs(:status).returns(200)
     result = model.class.parse(mock_resp)
     result.size.should eql(1)
     result.first.email.should eql(email)

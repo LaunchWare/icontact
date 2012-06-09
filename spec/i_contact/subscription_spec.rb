@@ -25,7 +25,8 @@ describe IContact::Subscription do
   it 'allows me to add a list subscription for a given contact' do
     sub = IContact::Subscription.new({
       :contact_id => contact.contact_id,
-      :list_id => list.list_id
+      :list_id => list.list_id,
+      :status => 'normal'
     });
 
     sub.save.should be_true

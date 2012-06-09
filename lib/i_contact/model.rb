@@ -73,13 +73,13 @@ module IContact
           raw_resp = connection.post(path(self.class.resource_name.demodulize.pluralize),
             serialized_attributes.to_json)
           response = IContact::Response.new(raw_resp)
-          if response.valid?
-            if response.parsed_response.values.first.first
+          if response.valid? && response.warnings.empty?
+            if response.parsed_response.values.first && response.parsed_response.values.first.first
               self.attributes = normalize_attrs(response.parsed_response.values.first.first)
             end
             true
           else
-            @errors = response.errors
+            @errors = response.errors + response.warnings
             false
           end
         else

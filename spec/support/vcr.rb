@@ -10,7 +10,8 @@ VCR.configure do |c|
   c.configure_rspec_metadata!
 
   c.default_cassette_options = {
-    :record => :new_episodes
+    :record => :new_episodes,
+    :match_requests_on => [:uri, :body]
   }
 end
 

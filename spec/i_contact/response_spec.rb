@@ -4,6 +4,7 @@ describe IContact::Response do
   let(:mock_raw_resp) do
     mock_resp = mock.tap do |m|
       m.stubs(:body).returns('{"errors":["Resource Or Version Not Implemented"]}')
+      m.stubs(:status).returns(200)
     end
   end
 
