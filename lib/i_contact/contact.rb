@@ -1,6 +1,5 @@
 module IContact
-  class Contact
-    include IContact::Model
+  class Contact < IContact::Model
 
     key_attribute :contact_id
     attribute :email, :type => String

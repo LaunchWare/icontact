@@ -17,9 +17,10 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'faraday'
   gem.add_dependency 'faraday_middleware'
-  gem.add_dependency 'activemodel'
-  gem.add_dependency 'active_attr'
   gem.add_dependency 'multi_json'
+  gem.add_dependency 'activesupport', '~> 2.3.5'
+  gem.add_dependency 'activerecord', '~> 2.3.5'
+  gem.add_dependency 'active_record_base_without_table'
 
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'mocha'

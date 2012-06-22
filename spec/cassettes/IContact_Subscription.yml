@@ -217,4 +217,224 @@ http_interactions:
       string: ! '[]'
     http_version: 
   recorded_at: Sat, 09 Jun 2012 20:25:51 GMT
+- request:
+    method: post
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/contacts
+    body:
+      encoding: US-ASCII
+      string: ! '[{"email":"subscriber@example.com"}]'
+    headers:
+      Api-Appid:
+      - <APP_ID>
+      Api-Username:
+      - <USER_NAME>
+      Api-Password:
+      - <PASSWORD>
+      Api-Version:
+      - '2.2'
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2012 19:04:12 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '291'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"contacts":[{"contactId":"66695798","prefix":"","firstName":"","lastName":"","suffix":"","street":"","street2":"","city":"","state":"","postalCode":"","phone":"","fax":"","business":"","email":"subscriber@example.com","createDate":"2012-06-22
+        15:04:12","bounceCount":"","status":"normal"}]}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2012 19:04:12 GMT
+- request:
+    method: post
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/subscriptions
+    body:
+      encoding: US-ASCII
+      string: ! '[{"status":"normal"}]'
+    headers:
+      Api-Appid:
+      - <APP_ID>
+      Api-Username:
+      - <USER_NAME>
+      Api-Password:
+      - <PASSWORD>
+      Api-Version:
+      - '2.2'
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2012 19:21:19 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '84'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"subscriptions":[],"warnings":["Subscription at index 0 field contactId
+        missing."]}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2012 19:21:19 GMT
+- request:
+    method: post
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/contacts
+    body:
+      encoding: US-ASCII
+      string: ! '[{}]'
+    headers:
+      Api-Appid:
+      - <APP_ID>
+      Api-Username:
+      - <USER_NAME>
+      Api-Password:
+      - <PASSWORD>
+      Api-Version:
+      - '2.2'
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2012 19:22:48 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '117'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"contacts":null,"warnings":["You did not provide an email field,
+        which is required. Please provide an email field"]}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2012 19:22:48 GMT
+- request:
+    method: post
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/lists
+    body:
+      encoding: US-ASCII
+      string: ! '[{}]'
+    headers:
+      Api-Appid:
+      - <APP_ID>
+      Api-Username:
+      - <USER_NAME>
+      Api-Password:
+      - <PASSWORD>
+      Api-Version:
+      - '2.2'
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2012 19:22:48 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '109'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"lists":[],"warnings":["You did not provide a name field, which
+        is required. Please provide a name field."]}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2012 19:22:48 GMT
+- request:
+    method: post
+    uri: https://app.sandbox.icontact.com/icp/a/413323/c/124667/subscriptions
+    body:
+      encoding: US-ASCII
+      string: ! '[{}]'
+    headers:
+      Api-Appid:
+      - <APP_ID>
+      Api-Username:
+      - <USER_NAME>
+      Api-Password:
+      - <PASSWORD>
+      Api-Version:
+      - '2.2'
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 22 Jun 2012 19:26:59 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '84'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '{"subscriptions":[],"warnings":["Subscription at index 0 field contactId
+        missing."]}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2012 19:26:59 GMT
 recorded_with: VCR 2.1.1

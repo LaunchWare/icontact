@@ -1,6 +1,5 @@
 module IContact
-  class Subscription
-    include IContact::Model
+  class Subscription < IContact::Model
 
     key_attribute :subscription_id
     attribute :contact_id, :type => Integer

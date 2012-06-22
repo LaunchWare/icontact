@@ -2,12 +2,11 @@ require 'faraday'
 require 'faraday_middleware/response/parse_json'
 require 'faraday/request/url_encoded'
 
-require 'active_attr'
-
 require 'i_contact/version'
 require 'i_contact/configuration'
 require 'i_contact/response'
 
+require 'i_contact/model_methods'
 require 'i_contact/model'
 
 require 'i_contact/account'

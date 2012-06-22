@@ -1,7 +1,5 @@
 module IContact
-  class ClientFolder
-    include IContact::Model
-
+  class ClientFolder < IContact::Model
     key_attribute :client_folder_id
 
     class << self
@@ -17,3 +15,4 @@ module IContact
     end
   end
 end
+

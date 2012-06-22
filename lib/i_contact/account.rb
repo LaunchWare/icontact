@@ -1,7 +1,5 @@
 module IContact
-  class Account
-    include IContact::Model
-
+  class Account < IContact::Model
     key_attribute :account_id
 
     class << self

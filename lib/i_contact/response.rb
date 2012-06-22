@@ -1,7 +1,5 @@
 module IContact
   class Response
-    include ActiveAttr::BasicModel
-
     attr_reader :errors
     attr_reader :warnings
     attr_reader :parsed_response

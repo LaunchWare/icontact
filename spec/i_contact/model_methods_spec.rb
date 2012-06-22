@@ -1,9 +1,7 @@
 require 'spec_helper'
 
-describe IContact::Model do
-  class TestModel
-    include IContact::Model
-
+describe IContact::ModelMethods do
+  class TestModel < IContact::Model
     key_attribute :test_model_id
     attribute :email, :type => String
   end
